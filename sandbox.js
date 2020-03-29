@@ -245,6 +245,19 @@ console.log(name > 'Seungji'); // false. Also if the value for name = kit, this 
 //console.log(age === 25); // still true
 //console.log(age === '25'); // now false, because of ===, instead of just ==, now the number/integer cannot be equal to a string/word value
 
-let age = 25;
-console.log(age !== 25); // false. duh
-console.log(age !== '25'); // true, coz age is NOT equal to string 25
+//let age = 25;
+//console.log(age !== 25); // false. duh
+//console.log(age !== '25'); // true, coz age is NOT equal to string 25
+
+//############################ TYPE CONVERSION ############################ 
+
+//let score = '100'; // this is a string
+//console.log(score + 1);
+// the statement below is how to convert
+
+let score = '100';
+score = Number(score); // convert the string '100' to a number
+console.log(score + 1);
+
+
+console.log(typeof score); // used to check what kind of data type the variable is
