@@ -136,7 +136,7 @@ let html = `
 
 //let ninjas = ['Kit', 'Naruto', 'Rekka'];
 //console.log(ninjas);
-//console.log(ninjas[1]); // answer would be Narutor as (0=kit, 1=naruto, and 2=rekka)
+//console.log(ninjas[1]); // answer would be Naruto as (0=kit, 1=naruto, and 2=rekka)
 
 //###### over riding values example
 //let ninjas = ['Kit', 'Naruto', 'Rekka'];
@@ -254,10 +254,53 @@ console.log(name > 'Seungji'); // false. Also if the value for name = kit, this 
 //let score = '100'; // this is a string
 //console.log(score + 1);
 // the statement below is how to convert
-
+/*
 let score = '100';
 score = Number(score); // convert the string '100' to a number
 console.log(score + 1);
 
 
 console.log(typeof score); // used to check what kind of data type the variable is
+*/
+
+//let result = Number('hello');
+//console.log(result);
+// NaN, it doesnt make sense
+
+/*
+//convert number to string
+let score = '100';
+let result = String(50);
+console.log(result, typeof result); // answer would be 50, the type would be string
+*/
+
+/*
+//convert number to strong
+let score = '100';
+let result = Boolean(100);
+console.log(result, typeof result); // answer would be true, "Boolean".
+*/
+
+/*
+let score = '100';
+let result = Boolean(0);
+console.log(result, typeof result); // answer would be false, "Boolean"
+*/
+
+/*
+let score = '100';
+let result = Boolean('0');
+console.log(result, typeof result); // answer would be True, "Boolean" since it is now a string
+*/
+
+/*
+let score = '100';
+let result = Boolean('');
+console.log(result, typeof result); // answer would be False, "Boolean" since there is nothing inside.
+*/
+
+//###################### CONTROL FLOW ###############################
+
+//################# FOR LOOPS ################
+
+let 
