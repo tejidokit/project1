@@ -420,7 +420,7 @@ if (age > 20){
 */
 
 // using IF Statements to check data
-
+/*
 const ninjas = ['naruto', 'kakashi', 'sai', 'shikamaru'];
 
 if(ninjas.length > 3){
@@ -428,5 +428,12 @@ if(ninjas.length > 3){
 }
 // so if the number of ninjas is more than 3, execute the code
 //answer: that's a lot of ninja
+*/
+
+const password = 'passwordy';
+
+if(password.length >= 8){
+    console.log('that password is long enough');
+}
 
 
