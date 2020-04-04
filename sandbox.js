@@ -250,7 +250,7 @@ console.log(name > 'Seungji'); // false. Also if the value for name = kit, this 
 //console.log(age !== '25'); // true, coz age is NOT equal to string 25
 
 //############################ TYPE CONVERSION ############################ 
-
+// Three things inside  
 //let score = '100'; // this is a string
 //console.log(score + 1);
 // the statement below is how to convert
@@ -302,5 +302,131 @@ console.log(result, typeof result); // answer would be False, "Boolean" since th
 //###################### CONTROL FLOW ###############################
 
 //################# FOR LOOPS ################
+// Elements inside a For Loop include the following: Initilization, a Condition and a Final Expression
+/*
+for(let i = 0; i < 5; i++){
+    console.log('in loop:', i);
+};
 
-let 
+console.log('loop finished');
+//answer on the console would be would be 
+    in loop: 0 sandbox.js:307:13
+    in loop: 1 sandbox.js:307:13
+    in loop: 2 sandbox.js:307:13
+    in loop: 3 sandbox.js:307:13
+    in loop: 4 sandbox.js:307:13
+    loop finished sandbox.js:310:9
+Live reload enabled.
+*/
+
+
+//################# FOR LOOPS for Database ################
+/*
+const names = ['nara', 'yamanaka', 'akimichi'];
+for(let i = 0; i < names.length; i++) {
+   console.log(i);
+}; 
+// for as long as i is less than the value, we will cycle through it/each one
+//answer would be 0 1 2 
+*/
+
+
+// ##### cyling through an array without knowing the length
+/*
+const names = ['nara', 'yamanaka', 'akimichi'];
+for(let i = 0; i < names.length; i++) {
+   console.log(names[i]);
+};
+//answer would show nara yamanaka akimichi
+*/
+
+
+/*
+// ##### cyling through an array, output would be on an html
+const names = ['nara', 'yamanaka', 'akimichi'];
+
+for(let i = 0; i < names.length; i++){
+    let html = `<div>${names[i]}</div>`;
+        console.log(html);
+};
+//answer would show <div>nara</div> <div>yamanaka</div> <div>akimichi</div>
+// Iteration == cycling through an array or some data, each iteration is one cycle through of the data.
+*/
+
+
+/* ############## WHILE LOOP #################### */
+
+// The FOR LOOP and the WHILE LOOP do the exact same thing, the only difference is the syntax
+//While loops would only include the Condition inside the parenthesis
+/*
+
+let i = 0;
+
+while(i < 5){
+    console.log('in loop: ', i);
+        i++;
+}
+//the answer would be an infinite loop since 0 isn't added anything and will always be less than 5 so it will be running over and over and over
+// so you need to add i++ so 0 gets added 1, and ultimately will be equal to 5
+//answer would be:  
+    //in loop:  0 sandbox.js:366:13
+    //in loop:  1 sandbox.js:366:13
+    //in loop:  2 sandbox.js:366:13
+    //in loop:  3 sandbox.js:366:13
+    //in loop:  4
+*/
+/*
+const names = ['hokage', 'kazekage', 'mizukage']
+
+let i = 0;
+
+while(i < names.length){
+    console.log(names[i]);
+        i++;
+};
+
+//answer would be hokage kazekage, mizukage
+*/
+
+
+
+// ############# DO WHILE LOOP ################
+// Run the code once then do not execute the code anymore
+/*
+let i = 5;
+
+do {
+    console.log('val of i is: ', i);
+    i++;
+}
+while(i < 5);
+
+//do the CODE, once to begin with, regardless of the condition being true or false
+// at the end of the DO BLOCK, 
+// this statement only runs once
+// if val is 4, it will still only run once, but if val is 3 it will say val of i is 3 val of i is 4, so it ran twice due to the i++
+// answer for the statement above is: val of i is 5 and it will only run once
+*/
+
+// ############ IF STATEMENTS ############
+// Code is executed ONLY if the condition is TRUE. No counter variables since the code block only executes once or not at all. no loops
+/*
+const age = 25;
+
+if (age > 20){
+    console.log('you are over 20 years old');
+}
+// answer: you are now 20 years old
+*/
+
+// using IF Statements to check data
+
+const ninjas = ['naruto', 'kakashi', 'sai', 'shikamaru'];
+
+if(ninjas.length > 3){
+    console.log("that's a lot of ninjas");
+}
+// so if the number of ninjas is more than 3, execute the code
+//answer: that's a lot of ninja
+
+
