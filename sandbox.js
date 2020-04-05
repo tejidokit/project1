@@ -96,12 +96,12 @@ let result = 'this blog has ' + likes + ' likes';
 console.log(result);
 */
 
-//################ TEMPLATE STRINGS #####################
+//################ TEMPLATE STRINGS #######################################
 //const title = 'Best Reads of 2020';
 //const author = 'Kit';
 //const likes = '30';
 
-//################ concatenation way #####################
+//################ concatenation way ##########################################################################################################
 //let result = 'The blog called ' + title + ' by ' + author + ' has ' + likes + ' likes';
 //console.log(result);
 
@@ -112,7 +112,7 @@ let result = `The blog called ${title} by ${author} has ${likes} likes`;
 console.log(result);
 
 
-//################ creating html templates for dynamic contenct #####################
+//################ creating html templates for dynamic contenct ################################################################################
 
 let html = `
     <h2>
@@ -132,7 +132,7 @@ let html = `
     console.log(html);
     */
 
-//################ OBJECT DATA TYPE ==== ARRAYS (collection of values on a variable) #####################
+//################ OBJECT DATA TYPE ==== ARRAYS (collection of values on a variable) ###########################################################
 
 //let ninjas = ['Kit', 'Naruto', 'Rekka'];
 //console.log(ninjas);
@@ -176,12 +176,12 @@ console.log(result); // by asking for the result the answer would be Kakashi
 */
 
 
-//################ NULL AND UNDEFINED DATA TYPES - used for clearing out forms #####################
+//################ NULL AND UNDEFINED DATA TYPES - used for clearing out forms ############################################################
 //let age = null;
 //console.log(age, age + 3, `the age is ${age}`); // the answer is null 3 the age is null
 
 
-//################ BOOLEANS true/false #####################
+//################ BOOLEANS true/false ######################################################
 
 //################ Booleans and comparisons
 //console.log(true, false);
@@ -198,7 +198,7 @@ console.log(result); // by asking for the result the answer would be Kakashi
 //console.log(result);   // answer is false because bowser is not included inside the array ['mario', 'luigi', 'princess peach'] 
 
 
-//################ Comparison operators ##
+//################ Comparison operators #####################################################
 
 //let age = 25;
 //console.log(age == 25); // == is a boolean method, meaning are these two values the same, while = symbol gives value to a variable
@@ -239,7 +239,7 @@ console.log(name > 'Seungji'); // false. Also if the value for name = kit, this 
 
 
 
-//######### strict comparison 
+//######### strict comparison ##################################
 
 //let age = 25;
 //console.log(age === 25); // still true
@@ -249,7 +249,7 @@ console.log(name > 'Seungji'); // false. Also if the value for name = kit, this 
 //console.log(age !== 25); // false. duh
 //console.log(age !== '25'); // true, coz age is NOT equal to string 25
 
-//############################ TYPE CONVERSION ############################ 
+//############################ TYPE CONVERSION ############################################### 
 // Three things inside  
 //let score = '100'; // this is a string
 //console.log(score + 1);
@@ -299,7 +299,7 @@ let result = Boolean('');
 console.log(result, typeof result); // answer would be False, "Boolean" since there is nothing inside.
 */
 
-//###################### CONTROL FLOW ###############################
+//###################### CONTROL FLOW #########################################################
 
 //################# FOR LOOPS ################
 // Elements inside a For Loop include the following: Initilization, a Condition and a Final Expression
@@ -320,7 +320,41 @@ Live reload enabled.
 */
 
 
-//################# FOR LOOPS for Database ################
+// ############ BREAK AND CONTINUE ############################################################
+/*
+const scores = [50, 20, 0, 30, 100, 20, 10,];
+
+for(let i = 0; i < scores.length; i++){
+
+    if(scores[i] === 0){
+        continue;
+    }
+
+    console.log('your scores;', scores[i]);
+
+    if(scores[i] === 100){
+        console.log('congrats, you go the top score');
+        break;
+    }
+
+}
+*/
+// i++ each cycle i gets added 1
+//Answer would be:
+/* 
+your scores; 50     
+your scores; 20      
+your scores; 30     
+your scores; 100        
+congrats, you go the top score
+*/
+// the break keyworkd breaks us out of the loop after fulfilling certain conditions like above
+//if the score is 0 then the code will not proceed to the next block, so 0 will not show on the console
+
+
+
+
+//################# FOR LOOPS for Database #####################################################
 /*
 const names = ['nara', 'yamanaka', 'akimichi'];
 for(let i = 0; i < names.length; i++) {
@@ -354,7 +388,7 @@ for(let i = 0; i < names.length; i++){
 */
 
 
-/* ############## WHILE LOOP #################### */
+/* ############## WHILE LOOP #################################### */
 
 // The FOR LOOP and the WHILE LOOP do the exact same thing, the only difference is the syntax
 //While loops would only include the Condition inside the parenthesis
@@ -390,7 +424,7 @@ while(i < names.length){
 
 
 
-// ############# DO WHILE LOOP ################
+// ############# DO WHILE LOOP ############################################################
 // Run the code once then do not execute the code anymore
 /*
 let i = 5;
@@ -407,6 +441,7 @@ while(i < 5);
 // if val is 4, it will still only run once, but if val is 3 it will say val of i is 3 val of i is 4, so it ran twice due to the i++
 // answer for the statement above is: val of i is 5 and it will only run once
 */
+
 
 // ############ IF STATEMENTS ############
 // Code is executed ONLY if the condition is TRUE. No counter variables since the code block only executes once or not at all. no loops
@@ -430,10 +465,169 @@ if(ninjas.length > 3){
 //answer: that's a lot of ninja
 */
 
-const password = 'passwordy';
+/*
+// ############ IF ELSE STATEMENTS #############################################################
 
-if(password.length >= 8){
+const password = 'passwordyfdfdfdf';
+
+
+if(password.length >= 12){
+
+    console.log('that password is super stronk');
+
+} else if(password.length >= 8){
+
     console.log('that password is long enough');
+
+} else {
+
+    console.log('password is not long enough');
+}
+// Only ONE of the conditions will run
+//answer from above would be: that password is super stronk
+*/
+
+
+// ############ LOGICAL OPERATORS ####################################################
+/*
+const password = 'pa@s';
+
+
+if(password.length >= 12 && password.includes('@')){
+
+    console.log('that password is super stronk');
+
+} else if(password.length >= 8 || password.includes('@') && password.length > 5){
+
+    console.log('that password is strong enough');
+
+} else {
+
+    console.log('password is strong');
+}
+// answer would be: that password is strong.... That is because it didn't pass additional conditional of having @ symbol so it goes down to the next conditional
+// || symbol means OR.
+*/
+
+// ########## LOGICAL NOT ###############################################################
+/*
+ let user = false;
+
+ if(!user){
+
+     console.log('you must be logged in to continue');
+ }
+ //code blocks means, that if the user is NOT false, then log will say: you must be logged in to continue.
+*/
+
+// ################ SWITCH STATEMENTS #####################################################################################
+// good for evaluating variables
+/*
+const  grade = 'D';
+
+switch(grade){
+    case 'A':
+        console.log('You got an A');
+        break;
+    case 'B':
+        console.log('You got an B');
+        break;
+    case 'C':
+        console.log('You got an C');
+        break;    
+    case 'D':
+        console.log('You got an D');
+        break;
+    case 'E':
+        console.log('You got an E');
+        break;
+    default:
+        console.log('not a valid grade');
+}
+*/
+// break needs to be written so the code will only run on the specific value (in this case is D) and not everything else that comes after is as well.
+// default case doest need to have a semi colon since it's the last one
+
+
+// ############# VARIABLES AND BLOCK SCOPE #################################################################################
+
+// block scope with variables, the area as to where the variable value is relevant
+
+/*
+let age = 30;
+
+if(true){
+    console.log('inside 1st code block:', age);
 }
 
+console.log('outside code block:', age);
+
+//this code block has global scope so the answer would be: inside 1st code block: 30 outside code block: 30
+*/
+
+/*
+let age = 30;
+
+if(true){
+    age = 40;
+    console.log('inside 1st code block:', age);
+}
+
+console.log('outside code block:', age);
+// answer is: inside 1st code block: 40 outside code block: 40
+*/
+/*
+let age = 30;
+
+if(true){
+    let age = 40;
+    let name = 'kittyboo';
+    console.log('inside 1st code block:', age, name);
+}
+
+console.log('outside code block:', age, name);
+// answer is: inside 1st code block: 40 kittyboo outside code block: 30 <empty string>
+// putting LET on the age, redefines it inside that particular code block, its only valid inside that code block
+*/
+/*
+let age = 30;
+
+if(true){
+    //let age = 40;
+    let name = 'kittyboo';
+    console.log('inside 1st code block:', age, name);
+
+    if(true){
+        console.log('inside 2nd code block: ', age);
+    }
+}
+
+console.log('outside code block:', age, name);
+// answer is: inside 2nd code block:  30
+// this is because the code will take whatever is closest variable's value first.
+*/
+
+/*
+let age = 30;
+
+if(true){
+    let age = 40;
+    let name = 'kittyboo';
+    console.log('inside 1st code block:', age, name);
+
+    if(true){
+        let age = 50;
+        console.log('inside 2nd code block: ', age);
+    }
+}
+
+console.log('outside code block:', age, name);
+// Answer: inside 1st code block: 40 kittyboo, inside 2nd code block:  50, outside code block: 30 <empty string>
+// the same concept applies to both either CONST and LET 
+// VAR ignores block scope so it's Bad.
+*/
+
+
+
+//############################################# CHAPTER 4 FUNCTIONS ############################################# FUNCTIONS #########################################################
 
