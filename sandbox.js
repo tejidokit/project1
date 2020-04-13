@@ -631,3 +631,137 @@ console.log('outside code block:', age, name);
 
 //############################################# CHAPTER 4 FUNCTIONS ############################################# FUNCTIONS #########################################################
 
+// A METHOD IS JUST A FUNCTION THAT IS ALSO AN OBJECT PROPERTY
+
+// Functions like Variables are also given names, but Functions need to be called
+// Below is an example of a FUNCTION DECLARATION
+// javascript only HOISTS FUNCTION DECLARATIONS
+/*
+function greet() {
+    console.log('Hello There');
+}
+
+// the Function greet is being called down / invoked below
+// also know as FUNCTION DECLARATION
+/*
+greet();
+greet();
+greet();
+*/
+
+
+//below is what is called an FUNCTION EXPRESSION, when you store a FUNCTION INSIDE A VARIABLE unlike the Function Declaration where you dont.
+// The variable can be set equal to something like a function, string, or number/integer. 
+// FUNCTION EXPRESSIONS always end with a semi colon
+//You can call a FUNCTION as many times as you want as seen below
+//Javascripts DOES NOT HOIST Function Expressions
+/*
+const speak = function(){
+    console.log('good day');
+};
+
+speak();
+speak();
+speak();
+*/
+
+//#################### ARGUMENTS AND PARAMETERS
+// a template string was used, notice the weird apostrophes
+// place values in order or else it wont work
+/*
+const speak = function(name, time){
+    console.log(`good ${time} ${name}`);
+};
+
+speak('Kit', 'afternoon');
+//output is good afternoon Kit
+*/
+/*
+const speak = function(name = 'naruto', time = 'night'){
+    console.log(`good ${time} ${name}`);
+};
+
+speak();
+//answer: good night naruto
+speak('kakashi', 'day');
+//answer: good day kakashi
+// the values on the code block are overwritten when assigning a value after it
+*/
+
+
+//#################### RETURNING VALUES
+/*
+const calcArea = function(radius){
+    return 3.14 * radius**2;
+}
+
+const area = calcArea(5);
+console.log(area);
+//value is stored in new const, in this case "a" in order to be outputed
+//answer is 78.5
+// const of area can now be used over and over for whatever reason
+
+*/
+
+//#################### ARROW FUNCTION
+/*
+const calcArea = (radius) => {
+    return 3.14 * radius**2;
+};
+
+const area = calcArea(5);
+console.log('area is:', area);
+//answer is. area is: 78.5
+
+
+//convert regular functions to arrow functions
+//sample 1, you can remove parethesis if theres only one parameter on the function
+function isPositive(number) {
+    return number >= )
+};
+
+const isPositive = number => number >= 0;
+
+//sample 2
+function randomNumber() {
+    return Math.random
+};
+
+const randomNumber = () => Math.random;
+
+//sample 
+document.addEventListener('click', function() {
+    console.log('click')
+});
+
+document.addEventListener('click', function() => console.log('click'));
+*/
+/*
+//FUNCTIONS VS METHODS
+const name = 'kenshin';
+//Funtions
+const greet = () => 'hello';
+let resultOne = greet();
+console.log(resultOne);
+//answer hello
+
+
+//Method uses DOT NOTATION, and defined on an object or data type
+
+let result = name.toUpperCase();
+console.log(result);
+//answer is KENSHIN
+*/
+
+//#################### CALLBACKS AND FOREACH 
+
+const myFunc = (callbackFunc) => {
+    //do something
+    let value = 50;
+    callbackFunc(value);
+};
+
+myFunc(value => {
+    //do something
+    console.log(value);
+});
