@@ -754,7 +754,7 @@ console.log(result);
 */
 
 //#################### CALLBACKS AND FOREACH 
-
+/*
 const myFunc = (callbackFunc) => {
     //do something
     let value = 50;
@@ -765,3 +765,293 @@ myFunc(value => {
     //do something
     console.log(value);
 });
+*/
+
+//########################## CALLBACKS
+//normal functions that passed in to another function
+/*
+let people = ['kenshin', 'yusuke', 'gon', 'kilua', 'ryu'];
+
+const logPerson = (person, index) => {
+    console.log(`${index} - hello ${person}`);
+};
+
+people.forEach(logPerson);
+//answer is below
+/*
+0 - hello kenshin sandbox.js:775:13
+1 - hello yusuke sandbox.js:775:13
+2 - hello gon sandbox.js:775:13
+3 - hello kilua sandbox.js:775:13
+4 - hello ryu
+*/
+
+//######## get a reference to the 'ul'
+/*
+const ul = document.querySelector('.people');
+
+const people = ['kenshin', 'yusuke', 'gon', 'kilua', 'ryu'];
+
+let html = ``;
+
+people.forEach(function(person){
+    //create an HTML template
+    html +=`<li style="color: purple">${person}</li>`;
+});
+
+console.log(html);
+//answer is 
+//<li style="color: purple"> kenshin</li><li style="color: purple"> yusuke</li><li style="color: purple"> gon</li><li style="color: purple"> kilua</li><li style="color: purple"> ryu</li>
+
+ul.innerHTML = html;
+
+*/
+
+
+//#################### OBJECTS
+/*
+Objects in real life have properies and things it can do
+
+OBJECTS = cellphone
+PROPERTIES = color, size, model
+things it can do/METHODS/FUNCTIONS = move, take a picture, play music
+
+*/
+
+//######### OBJECT LITERAL
+/* 
+let user = {
+    name: 'yasuke',
+    age: 29,
+    email: tejidoyasuke@gmail.com,
+    location: 'japan',
+    blog: ['how to defeat demons', '10 things to do when in the spirit world'];
+};
+
+console.log(user);
+console.log(user.name);
+
+user.age = 35;
+console.log(user.age); //update a property using DOT notation
+
+console.log(user['name']); //access using square bracket notation
+
+user['name'] = 'eugene';
+console.log(user['name']); //update a property using square bracket notation
+
+const key =  'location';
+
+console.log(typeof user); //checking the type of variable
+//answer would be OBJECT
+*/
+
+
+
+//################## ADDING METHODS (THINGS IT CAN DO) TO THE OBJECTS
+/*
+let user = {
+    name: 'yasuke',
+    age: 29,
+    email: 'tejidoyasuke@gmail.com',
+    location: 'japan',
+    blog: ['how to defeat demons', '10 things to do when in the spirit world'],
+    //add methods
+    login: function(){
+        console.log('the ghost detective is in');
+    },
+
+    logout: function(){
+        console.log('ghost detective is out');
+    },
+
+    logBlogs: function(){
+        //use THIS KEYWORD
+        this.blogs(this,blogs);
+    },
+};
+
+//call out the method
+user.login();
+//answer: the ghost detective is in
+
+user.logout();
+//answer: the ghost detective is out
+ */
+
+/*
+let user = {
+    name: 'yasuke',
+    age: 29,
+    email: 'tejidoyasuke@gmail.com',
+    location: 'japan',
+    blogs: ['how to defeat demons', '10 things to do when in the spirit world'],
+    //add methods using SHORT HAND style on the functions
+    login(){
+        console.log('the ghost detective is in');
+    },
+
+    logout(){
+        console.log('ghost detective is out');
+    },
+
+    logBlogs(){
+        console.log('this user has writtent he following blogs');
+        this.blogs.forEach(blog => {
+            console.log(blog)
+        });
+    }
+};
+
+user.logBlogs();
+//answer: 
+/*
+this user has writtent he following blogs
+how to defeat demons 
+10 things to do when in the spirit world
+
+
+console.log(this);
+*/
+
+//################ OBJECTS IN ARRAYS
+/*
+let user = {
+    name: 'yasuke',
+    age: 29,
+    email: 'tejidoyasuke@gmail.com',
+    location: 'japan',
+    blogs: [
+        { title: 'why bulalo rules', likes: 30},
+        { title: 'ten things to make kimchi', likes: 10}
+    ],
+    //add methods using SHORT HAND style on the functions
+    login(){
+        console.log('the ghost detective is in');
+    },
+
+    logout(){
+        console.log('ghost detective is out');
+    },
+
+    logBlogs(){
+        console.log('this user has writtent he following blogs:');
+        this.blogs.forEach(blog => {
+            console.log(blog.title, blog.likes);
+        });
+    }
+};
+
+user.logBlogs();
+//answer:
+// this user has writtent he following blogs: sandbox.js:945:17
+// why bulalo rules 30 sandbox.js:947:21
+// ten things to make kimchi 10
+*/
+
+//############ MATH OBJECT
+
+// console.log(Math);
+
+// console.log(Math.PI);
+
+// console.log(Math.E);
+
+// const area = 7.7;
+
+// console.log(Math.round(area));
+//answer is 8
+
+
+// const area = 7.7;
+
+// console.log(Math.floor(area));
+//answer is just 7
+
+
+// const area = 7.7;
+
+// console.log(Math.ceil(area));
+//answer is just 8
+
+
+// const area = 7.7;
+
+// console.log(Math.trunc(area));
+//answer is just 7
+
+
+// ########## GENERATE RANDOM NUMBERS using Math object
+
+// const random = Math.random();
+// console.log(random);
+// console.log(Math.round(random * 100)); //generates a random number between 1 and 100
+
+// ################### PRIMITIVE AND REFERENCE TYPES
+
+//PRIMITIVE TYPES - stored on the STACK (less space but faster)
+/*
+numbers
+strings
+booleans
+null
+undefined
+symbols
+*/
+
+//REFERENCE TYPES - stored on the HEAP (more space but slower)
+/*
+all types of objects
+object literals
+arrays
+functions
+dates
+all other objects
+*/
+
+// PRIMITIVE VALUES EXAMPLES
+
+// let scoreOne = 50;
+// let scoreTwo = scoreOne;
+
+// console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+// //answer is scoreOne: 50 scoreTwo: 50
+
+// scoreOne = 100;
+// console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+//answer is scoreOne: 50 scoreTwo: 50
+//answer is scoreOne: 100 scoreTwo: 50
+
+
+// REFERENCE VALUES EXAMPLES stored once with different pointers
+
+// const userOne =  {name: 'ryu', age: 30};
+// const userTwo = userOne;
+
+// console.log(userOne, userTwo);
+//answer is 
+// Object { name: "ryu", age: 30 }
+// Object { name: "ryu", age: 30 }
+
+
+
+//############## Examples 
+
+// const userOne =  {name: 'ryu', age: 30};
+// const userTwo = userOne;
+
+// console.log(userOne, userTwo);
+//answer is 
+// Object { name: "ryu", age: 30 }
+// Object { name: "ryu", age: 30 }
+
+// userOne.age = 40;
+// console.log(userOne, userTwo);
+//answer is 
+// Object { name: "ryu", age: 40 } Object { name: "ryu", age: 40 }
+
+// userOne.name = 'honda';
+// console.log(userOne, userTwo);
+//answer is 
+// Object { name: "honda", age: 40 } Object { name: "honda", age: 40 }
+
+ 
