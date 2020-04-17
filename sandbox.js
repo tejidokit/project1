@@ -1055,3 +1055,6 @@ all other objects
 // Object { name: "honda", age: 40 } Object { name: "honda", age: 40 }
 
  
+
+//############## DOCUMENT OBJECT MODEL #########################
+
