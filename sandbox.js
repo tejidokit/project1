@@ -1058,3 +1058,74 @@ all other objects
 
 //############## DOCUMENT OBJECT MODEL #########################
 
+//####### 2 METHODS OF SELECTING OBJECTS FROM THE HTML DOCUMENT #########
+
+
+//############ Query Selector
+/* 
+const para = document.querySelector('p'); //grabs the <p> tag
+
+console.log(para);
+*/
+
+
+
+//grabs the <p>  with a class of error or <p class="error">
+
+/*
+const para = document.querySelector('.error');
+
+console.log(para);
+ */
+
+
+//time to get specific
+/*
+const para = document.querySelector('div.error');
+
+console.log(para);
+ */
+
+ /*
+const para = document.querySelector('body > h1');
+
+console.log(para);
+*/
+
+
+//############ Query SelectorALL
+
+// selecting multiple objects
+/*
+const para = document.querySelectorALL('p');
+console.log(para);
+//answer is Nodelist(3) [p, p, p.error]
+*/
+
+
+//selecting a specific object from the group
+/*
+const para = document.querySelectorALL('p');
+console.log(para[2]);
+//answer is <p class="error">this is an error message </p>
+*/
+
+
+//using FOR EACH combo
+/*
+const para = document.querySelectorALL('p');
+
+paras.forEach(para => {
+    console.log(para);
+});
+
+console.log(para[2]);
+//the result would show all of the <p> 
+*/
+/*
+const paras = document.querySelectorALL('p');
+
+const errors = document.querySelectorALL('.error');
+
+const.log(errors);
+*/
