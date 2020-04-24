@@ -1129,3 +1129,45 @@ const errors = document.querySelectorALL('.error');
 
 const.log(errors);
 */
+
+
+//##################### OTHER WAYS TO SELECT ELEMENTS ##########################
+
+
+
+
+
+//########### Get Element by ID
+
+/* 
+const title = document.getElementById('page-title');
+console.log(title);
+//answer <h1 id="page-title">
+*/
+
+
+// ########## Get Elements by their class name
+/* 
+
+const errors = document.getElementsByClassName('error');
+console.log(errors);
+//answer HTMLCollection { 0: p.error, 1: div.error, length: 2 }
+
+// to get the first element
+console.log(errors[0]);
+//answer <p class="error"></p>
+*/
+
+
+// ########## Get Elements by their tag name
+/* 
+const paras =  document.getElementsByTagName('p');
+
+console.log(paras);
+
+console.log(paras[1]);
+
+//answer <p> lorem ipsum </p>
+*/    
+
+
