@@ -1133,7 +1133,7 @@ const.log(errors);
 
 //##################### OTHER WAYS TO SELECT ELEMENTS ##########################
 
-
+// YOu cant use ForEach methods on this, you have to convert them into arrays first
 
 
 
@@ -1171,3 +1171,74 @@ console.log(paras[1]);
 */    
 
 
+
+// ################## ADDING AND CHANGING PAGE CONTENT
+/* 
+const para = document.querySelector('p');
+
+//console.log(para.innerText); //this is a property not a method
+
+para.innerText = 'ninjas are awesome!';
+//answer ON HTML WEB PAGE ninjas are awesome! 
+*/
+
+
+// appendding instead of replacing
+/* 
+const para = document.querySelector('p');
+
+//console.log(para.innerText); //this is a property not a method
+
+para.innerText += ' ninjas are awesome!';
+//answer ON HTML WEB PAGE -> Hello World ninjas are awesome! 
+*/
+
+
+
+//############### CHANGING THE TEXT OF SEVERAL ITEMS AT ONCE
+/*
+const paras = document.querySelectorAll('p');
+
+//callback function
+paras.forEach(para => {
+    console.log(para.innerText);
+    para.innerText += ' new text';
+});
+/* 
+answer: 
+Hello World new text
+
+lorem ipsum new text
+
+this is an error message new text
+
+this is another error 
+*/
+
+
+
+//###########  CHANGE THE HTML 
+/* 
+const content = document.querySelector('.content');
+
+//console.log(content.innerHTML);
+
+content.innerHTML += '<h2>THIS IS THE NEW H2</h2>';
+
+//ANSWER ->
+// this is the content 
+//THIS IS THE NEW H2
+*/
+
+
+//############### OUTPUT AN HTML TEMPLATE FOR EACH ITEM / PERSON / ELEMENT FROM A DATABASE
+
+    // make an arrray
+
+const content = document.querySelector('.content');
+
+const dragon = ['nadare', 'saiha', 'homura'];
+
+dragon.forEach(hokage => {
+    content.innerHTML += `<p>${hokage}</p>`;
+});
