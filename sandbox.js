@@ -1234,7 +1234,7 @@ content.innerHTML += '<h2>THIS IS THE NEW H2</h2>';
 //############### OUTPUT AN HTML TEMPLATE FOR EACH ITEM / PERSON / ELEMENT FROM A DATABASE
 
     // make an arrray
-
+/* 
 const content = document.querySelector('.content');
 
 const dragon = ['nadare', 'saiha', 'homura'];
@@ -1242,3 +1242,56 @@ const dragon = ['nadare', 'saiha', 'homura'];
 dragon.forEach(hokage => {
     content.innerHTML += `<p>${hokage}</p>`;
 });
+
+//answer on htmpl page would be nadare saiha homura
+*/
+
+
+
+//################### GETTING AND SETTING html ATTRIBUTES
+/*
+const link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+//ans: htttps://www.google.com
+ */
+
+
+//### CHANGING THE ATTRIBUTE
+/* 
+const link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+
+link.setAttribute('href', 'https://duckduckgo.com');
+
+link.innerText = 'the better browser';
+
+//ans: the better browser and will link to ddg
+
+const mssg = document.querySelector('p');
+
+console.log(mssg.getAttribute('class'));
+
+//ans: error class
+
+
+mssg.setAttribute('class', 'success');
+
+//ans: error class
+*/
+
+
+//###### SET ATTRIBUTE THAT DOESN'T EXISTS YET 
+
+const mssg = document.querySelector('p');
+
+console.log(mssg.getAttribute('class'));
+
+mssg.setAttribute('class', 'success');
+
+mssg.setAttribute('style', 'color: yellow');
+
+
+//ans: erro on html page turns to yellow
+//ans: on console, this happens <p class="success" style="color: yellow">errror</p>
