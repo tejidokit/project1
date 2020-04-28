@@ -1283,7 +1283,7 @@ mssg.setAttribute('class', 'success');
 
 
 //###### SET ATTRIBUTE THAT DOESN'T EXISTS YET 
-
+/* 
 const mssg = document.querySelector('p');
 
 console.log(mssg.getAttribute('class'));
@@ -1292,6 +1292,32 @@ mssg.setAttribute('class', 'success');
 
 mssg.setAttribute('style', 'color: yellow');
 
-
+*/
 //ans: erro on html page turns to yellow
 //ans: on console, this happens <p class="success" style="color: yellow">errror</p>
+
+
+
+//########################### CHANGING CSS STYLES ##########################
+
+const title = document.querySelector('h2');
+
+//title.setAttribute('style', 'margin: 50px;');
+
+//### CHECKING THE STYLE PROPERTY OF AN OBJECT FROM THE CONST ABOVE
+console.log(title.style);
+console.log(title.style.color);
+
+//#### ADD STYLES the BEST way
+title.style.margin = '50px';
+// answer: color: orange; margin: 50px;
+
+//add color style
+title.style.color = 'crimson';
+//ans: color: crimson;
+
+//changing font style
+title.style.fontSize = '60px';
+
+// deleting a style
+title.style.margin = '';
