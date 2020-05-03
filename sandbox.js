@@ -1299,7 +1299,7 @@ mssg.setAttribute('style', 'color: yellow');
 
 
 //########################### CHANGING CSS STYLES ##########################
-
+/* 
 const title = document.querySelector('h2');
 
 //title.setAttribute('style', 'margin: 50px;');
@@ -1321,3 +1321,51 @@ title.style.fontSize = '60px';
 
 // deleting a style
 title.style.margin = '';
+
+*/
+
+
+
+//############ ADDING AND REMOVING CLASSES FROM ELEMENTS
+/* 
+const content = document.querySelector('p')
+
+console.log(content.classList);
+
+content.classList.add('toinks');
+
+content.classList.remove('toinks');
+
+content.classList.add('yehey');
+*/
+
+
+//check for a specific element line 49-56 @ html file
+/*
+const paras = document.querySelectorAll('p');
+
+// check error tag on an html
+paras.forEach(p => {
+    if(p.textContent.includes('error')){
+        p.classList.add('error'); 
+    } // now any html tag that has the word error on it gets an "error" class
+
+    if(p.textContent.includes('success')){
+        p.classList.add('success'); 
+    } // now any html tag that has the word success on it gets an "success" class
+});
+
+*/
+
+//########## USING THE TOGGLE method
+/*
+const title = document.querySelector('.title');
+
+title.classList.toggle('test);
+
+title.classList.toggle('test);
+
+//removes the class if it has one, if it doesnt have one it give it one
+
+*/
+
