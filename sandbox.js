@@ -1413,5 +1413,52 @@ console.log(title.previousElementSibling);
 
 //########## EVENT BASICS (CLICK EVENTS) ##############
 
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    console.log('you clicked me');
+}) 
+//add method, then add an event of 'click' as argument within method, and add call back arrow functon
+//ans on console after clicking button: 'you clicked me'
+
+/* 
+const items = document.querySelectorAll('li');
+
+items.forEach( item => {
+    item.addEventListener('click', (event) => {
+        console.log('item clicked');
+    });
+})
+
+//when clicking an li element the console will output 'item clicked'
+*/
+
+/* 
+const items = document.querySelectorAll('li');
+
+items.forEach( item => {
+    item.addEventListener('click', (event) => {
+        console.log(event)
+        console.log(e.target);
+    });
+})
+
+//ans after clicking one of the li elements: click { target: li, buttons: 0, clientX: 326, clientY: 274, layerX: 326, layerY: 274 }
+//MouseEvent.mozPressure is deprecated. Use PointerEvent.pressure instead.
+//target property on dropdown @ console would reveal that li was clicked. target: <li>
+*/
 
 
+//change console.log to reveal
+const items = document.querySelectorAll('li');
+
+items.forEach( item => {
+    item.addEventListener('click', (event) => {
+        console.log(event.target);
+        //or
+        console.log(item);
+    });
+})
+
+//ans: <li>
+//ans: <li>
