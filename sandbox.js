@@ -1369,3 +1369,49 @@ title.classList.toggle('test);
 
 */
 
+// DOM HIERARCHY. QUERYING PARENTS, CHILDREN AND SIBLINGS IN A DOM line 64 -  72 in the HTML file
+// you cannot use FOREACH on an HTML collection only on nodelists, or arrays
+/* 
+const article = document.querySelector('article');
+
+console.log(article.children);
+//ans: HTMLCollection { 0: h2, 1: p, 2: p, 3: p, 4: p, 5: p, 6: div, length: 7 }
+*/
+//####### take HTML collection and turn it into an array #########
+/* 
+Array.from('article.children');
+console.log(Array.from('article.children'));
+//ans: Array(16) [ "a", "r", "t", "i", "c", "l", "e", ".", "c", "h", … ]
+
+
+//##### Now FOREACH can be used ####/
+
+const article = document.querySelector('article');
+Array.from(article.children).forEach(child => {
+    child.classList.add('article-element');
+});
+
+//ans: every element inside the article would now have a class of "article-element"
+*/
+
+//##### Find the PARENT element instead of the CHILD
+/* 
+const title = document.querySelector('h6');
+console.log(title.parentElement);
+//ans: <article>
+
+console.log(title.parentElement.parentElement);
+//ans: <body>
+
+console.log(title.nextElementSibling);
+//ans: <p>
+
+console.log(title.previousElementSibling);
+//ans: <p> this would be the <p> before the <h6> tag
+*/
+
+
+//########## EVENT BASICS (CLICK EVENTS) ##############
+
+
+
