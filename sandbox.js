@@ -1412,7 +1412,7 @@ console.log(title.previousElementSibling);
 
 
 //########## EVENT BASICS (CLICK EVENTS) ##############
-
+/*
 const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
@@ -1420,6 +1420,7 @@ button.addEventListener('click', () => {
 }) 
 //add method, then add an event of 'click' as argument within method, and add call back arrow functon
 //ans on console after clicking button: 'you clicked me'
+*/
 
 /* 
 const items = document.querySelectorAll('li');
@@ -1448,7 +1449,7 @@ items.forEach( item => {
 //target property on dropdown @ console would reveal that li was clicked. target: <li>
 */
 
-
+/* 
 //change console.log to reveal
 const items = document.querySelectorAll('li');
 
@@ -1462,3 +1463,73 @@ items.forEach( item => {
 
 //ans: <li>
 //ans: <li>
+*/
+
+
+/* 
+//#### adding a css property when the element gets clicked ####
+const items = document.querySelectorAll('li');
+
+items.forEach( item => {
+    item.addEventListener('click', (event) => {
+        event.target.style.textDecoration = 'line-through'; //line through is a css property
+    });
+})
+
+// result: the element gets a line when clicked
+*/
+
+
+
+//############# CREATING AND REMOVING/DELETING ELEMENTS FROM THE DOM ############### 
+/*
+//use the "remove" method
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.target.remove();          
+    });
+});
+
+*/
+
+
+
+//####### add something whenever button get's clicked ##########
+
+//first grab the button
+const button = document.querySelector('button');
+
+//grab the ul
+const ul = document.querySelector('ul');
+//add click event to button and even listener that fires when button is clicked
+button.addEventListener('click', () => {
+    ul.innerHTML += '<li>something new</li>';
+});
+
+
+//or use a createElement Method, and place a 'li' tag on the argument on the createElement Method
+/*
+button.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = 'something new to do'; 
+
+    //### now insert the li to the DOM using the APPEND method, append means put the tag (li) at the bottom of the parent tag (ul), you can also use PREPEND which does the opposite, and sends the new (li) he top ###
+
+    ul.append(li);
+});
+*/
+
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.target.remove();          
+    });
+});
+
+
+
