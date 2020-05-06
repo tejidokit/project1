@@ -1496,7 +1496,7 @@ items.forEach(item => {
 */
 
 
-
+/*
 //####### add something whenever button get's clicked ##########
 
 //first grab the button
@@ -1520,7 +1520,7 @@ button.addEventListener('click', () => {
 
     ul.append(li);
 });
-*/
+
 
 
 const items = document.querySelectorAll('li');
@@ -1530,6 +1530,61 @@ items.forEach(item => {
         event.target.remove();          
     });
 });
+*/ 
 
 
+//####### EVENT BABBLING AND DELEGATION ##########
+/* 
+const button = document.querySelector('button');
+const ul = document.querySelector('ul');
+
+button.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = 'something new to do'; 
+    ul.append(li);
+});
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item => {
+    item.addEventListener('click', (event) => {
+        console.log('event in LI');
+        event.stopPropagation();
+        event.target.remove();          
+    });
+});
+
+ul.addEventListener('click', (event) => {
+    console.log('event in UL');
+})
+
+//ans would be: event in LI, event in UL, you don't want the UL to fire up, after the LI fires up, so to prevent this a stopPropagation METHOD is used on the LI, the event object
+//after stop propagation method is placed, answer on console would now be: event in LI
+*/
+
+
+
+// ############## DELEGATION #################
+//callback function fires up not on element itself but bubbles to the next element that has the evenr listener which is the UL, 
+//so you can just have an even listener on the UL and not have to do it for each Li tag
+/* 
+const button = document.querySelector('button');
+const ul = document.querySelector('ul');
+
+button.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = 'something new to do'; 
+    ul.append(li);
+});
+
+ul.addEventListener('click', (event) => {
+    console.log(event.target);
+    if(event.target.tagName === 'LI') {
+        event.target.remove();
+    }
+});
+//ans: every click on the li would show: <li>
+
+// TODO LIST IS DONE!!!! YEY!!!! 
+*/
 
