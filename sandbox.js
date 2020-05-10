@@ -1591,7 +1591,7 @@ ul.addEventListener('click', (event) => {
 
 
 //########### MORE DOM EVENTS ########## 
-
+/*
 //show a copy event on the console
 
 const copy =  document.querySelector('.copy-me');          // call out the element on javascript
@@ -1616,6 +1616,28 @@ box.addEventListener('mousemove', (event) => {
 document.addEventListener('wheel', (event) => {
     console.log(event.pageX, event.pageY);
 });
-
+ 
 // THERE'S MORE TYPES OF EVENTS 
+*/
 
+
+
+
+//########### BUILDING A POPUP ##########
+
+const button = document.querySelector('button');
+const popup = document.querySelector('.popup-wrapper'); 
+const close = document.querySelector('.popup-close');
+
+
+button.addEventListener('click', () => {
+    popup.style.display = 'block';
+});
+
+close.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+popup.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
