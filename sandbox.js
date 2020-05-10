@@ -1588,3 +1588,34 @@ ul.addEventListener('click', (event) => {
 // TODO LIST IS DONE!!!! YEY!!!! 
 */
 
+
+
+//########### MORE DOM EVENTS ########## 
+
+//show a copy event on the console
+
+const copy =  document.querySelector('.copy-me');          // call out the element on javascript
+copy.addEventListener('copy', () => {
+    console.log('OI! my content is copyright')            //add an event listener
+});    
+
+//ans: when using mouse to copy the first paragraph, the console will show OI! my content is copyright
+
+
+// show x and y position of mouse on the screen when hovering over element with class of box
+
+const box = document.querySelector('.box');
+
+box.addEventListener('mousemove', (event) => {
+    //console.log(event.offsetX, event.offsetY);
+    box.textContent = `x pos - ${event.offsetX} y pos - ${event.offsetY}`;
+});
+
+
+//show mouse wheel movement on console
+document.addEventListener('wheel', (event) => {
+    console.log(event.pageX, event.pageY);
+});
+
+// THERE'S MORE TYPES OF EVENTS 
+
