@@ -1673,5 +1673,44 @@ form.addEventListener('submit', (event) => {
 */
 
 
-//Setting up the parameters of a form submission by using REGEX or Regular Expression
+//############ Setting up the parameters of a form submission by using REGEX or Regular Expression ###################
+/* 
+const username = 'kittyboo1234';
+const pattern = /[a-z]{6,}/ //lower case letters and at least 6 characters long
 
+//test is a regex method
+/*let result = pattern.test(username);
+
+console.log(result);
+//ans: true
+
+//if this is written instead
+//const pattern = /^[a-z]{6,}$/ //only alphabet on the beginning and end and then only 6 characters are allowed.
+
+if(result){ 
+    console.log('regex test passed');
+} else {
+    console.log('regex test failed');
+}
+
+//ans, for the username on console: regex test passed
+ */
+
+//### or you can use this method
+/*
+let result = username.search(pattern);
+console.log(result);
+//ans: 0
+*/
+
+
+//############ BASIC FORM VALIDATION #############
+
+const form = document.querySelector('.signup-form');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(form.username.value)
+});
+
+const username = form.username.value;
