@@ -1585,7 +1585,7 @@ ul.addEventListener('click', (event) => {
 });
 //ans: every click on the li would show: <li>
 
-// TODO LIST IS DONE!!!! YEY!!!! 
+//#######  TODO LIST IS DONE!!!! YEY!!!! #############
 */
 
 
@@ -1624,7 +1624,7 @@ document.addEventListener('wheel', (event) => {
 
 
 //########### BUILDING A POPUP ##########
-
+/* 
 const button = document.querySelector('button');
 const popup = document.querySelector('.popup-wrapper'); 
 const close = document.querySelector('.popup-close');
@@ -1641,3 +1641,37 @@ close.addEventListener('click', () => {
 popup.addEventListener('click', () => {
     popup.style.display = 'none';
 });
+*/
+//########## end of popup #################
+
+
+
+
+//########## BASIC FORM #################
+//remember that the form itself is where you put the event listener not the submit button
+/* 
+const form = document.querySelector('.signup-form');
+const username = document.querySelector('#username');
+
+//remove the default action of refreshing afterm submitting
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(username.value);
+})
+
+
+//#### or you can use dot notation ####
+
+const form = document.querySelector('.signup-form');
+
+//remove the default action of refreshing afterm submitting
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(form.username.value) //this matches ID on the HTML you can also use a NAME html attribute instead of an ID
+});
+*/
+
+
+//Setting up the parameters of a form submission by using REGEX or Regular Expression
+
