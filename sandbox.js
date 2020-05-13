@@ -1708,6 +1708,7 @@ console.log(result);
 
 const form = document.querySelector('.signup-form');
 const feedback = document.querySelector('.feedback');
+const usernamePattern = /^[a-z]{6,12}$/;
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -1722,7 +1723,21 @@ form.addEventListener('submit', (event) => {
         //feedback help info
         feedback.textContent = 'username must contain letters only and be between 6 & 12 characters long';
     }
-    
 });
 
+//### live feeback for keyboard events ###
+//use the keyup event 
 
+form.username.addEventListener('keyup', event => {
+    //console.log(event.target.value, form.username.value);
+    if(usernamePattern.test(event.target.value)){
+        //console.log('pass');
+        form.username.setAttribute('class', 'success');
+        
+    } else {
+        //console.log('failed');
+        form.username.setAttribute('class', 'error');
+    }
+});
+
+//result: if true then box turns green and red if not.

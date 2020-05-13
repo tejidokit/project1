@@ -100,3 +100,10 @@ input {
     padding: 4px;
 }
 
+.success {
+    border: 2px solid limegreen;
+}
+
+.error {
+    border: 2px solid crimson;
+}
