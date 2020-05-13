@@ -1707,10 +1707,22 @@ console.log(result);
 //############ BASIC FORM VALIDATION #############
 
 const form = document.querySelector('.signup-form');
+const feedback = document.querySelector('.feedback');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log(form.username.value)
+    //validation
+    const username = form.username.value;
+    const usernamePattern = /^[a-z]{6,12}$/;
+
+    if(usernamePattern.test(username)){
+        //feedback good info
+        feedback.textContent = 'that username is valid';
+    } else {
+        //feedback help info
+        feedback.textContent = 'username must contain letters only and be between 6 & 12 characters long';
+    }
+    
 });
 
-const username = form.username.value;
+
