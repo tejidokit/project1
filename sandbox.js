@@ -1855,3 +1855,16 @@ console.log(result);
 //ans: 60
 
 
+
+// ############ SORT METHOD ###############
+
+// const names = ['mario', 'kit', 'chun-li', 'yoshi', 'luigi'];
+
+// names.sort();
+// console.log(names);
+//ans: Array(5) [ "chun-li", "kit", "luigi", "mario", "yoshi" ]
+//all array items will be in alphabetical order
+
+
+
+
